@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>欢迎来到小黑子基地</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                    radial-gradient(circle at top, rgba(255, 213, 0, 0.18), transparent 35%),
+                    linear-gradient(135deg, #050505, #151515, #000);
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .page {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            width: 420px;
+            padding: 42px 32px;
+            border-radius: 28px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65);
+            animation: cardFloat 3s ease-in-out infinite;
+        }
+
+        .logo {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background:
+                    radial-gradient(circle at 35% 30%, #fff, #f6d64a 28%, #111 30%, #000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            box-shadow:
+                    0 0 35px rgba(255, 213, 0, 0.38),
+                    inset 0 0 25px rgba(255, 255, 255, 0.12);
+            animation: rotateBall 5s linear infinite;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .sub-title {
+            display: inline-block;
+            margin-bottom: 24px;
+            padding: 7px 18px;
+            border-radius: 999px;
+            background: rgba(255, 213, 0, 0.16);
+            color: #ffe066;
+            font-size: 14px;
+            border: 1px solid rgba(255, 213, 0, 0.35);
+        }
+
+        .desc {
+            color: #ddd;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 28px;
+        }
+
+        .keywords {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .keywords span {
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+            color: #eee;
+        }
+
+        .btn {
+            border: none;
+            cursor: pointer;
+            padding: 14px 32px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #ffe066, #ffb703);
+            color: #111;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(255, 183, 3, 0.35);
+            transition: 0.25s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 16px 40px rgba(255, 183, 3, 0.48);
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        .danmu {
+            position: absolute;
+            left: -360px;
+            white-space: nowrap;
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.08);
+            animation: danmuMove 13s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .danmu:nth-child(1) {
+            top: 12%;
+            animation-delay: 0s;
+        }
+
+        .danmu:nth-child(2) {
+            top: 28%;
+            animation-delay: 3s;
+        }
+
+        .danmu:nth-child(3) {
+            top: 48%;
+            animation-delay: 6s;
+        }
+
+        .danmu:nth-child(4) {
+            top: 68%;
+            animation-delay: 9s;
+        }
+
+        .danmu:nth-child(5) {
+            top: 84%;
+            animation-delay: 12s;
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.38);
+        }
+
+        @keyframes cardFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes rotateBall {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes danmuMove {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(150vw);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+                padding: 34px 22px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .logo {
+                width: 110px;
+                height: 110px;
+                font-size: 54px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="danmu">练习时长两年半</div>
+<div class="danmu">唱 跳 Rap 篮球</div>
+<div class="danmu">你干嘛~ 哎哟~</div>
+<div class="danmu">鸡你太美</div>
+<div class="danmu">全民制作人集合</div>
+
+<main class="page">
+    <section class="card">
+        <div class="logo">🐔</div>
+
+        <h1>小黑子基地</h1>
+
+        <div class="sub-title">
+            隐藏身份：资深 iKun
+        </div>
+
+        <p class="desc">
+            表面上是小黑子，<br />
+            实际上已经循环播放两年半。<br />
+            唱、跳、Rap、篮球，一个都不能少。
+        </p>
+
+        <div class="keywords">
+            <span>唱</span>
+            <span>跳</span>
+            <span>Rap</span>
+            <span>篮球</span>
+            <span>鸡你太美</span>
+        </div>
+
+        <button class="btn" onclick="startKunMode()">
+            启动小黑子模式
+        </button>
+
+        <div class="footer">
+            Welcome to ikun world
+        </div>
+    </section>
+</main>
+
+<script>
+    function startKunMode() {
+        const texts = [
+            "你干嘛~ 哎哟~",
+            "练习时长两年半！",
+            "唱、跳、Rap、篮球！",
+            "鸡你太美，无法撤回！",
+            "小黑子露出鸡脚了吧！"
+        ];
+
+        const index = Math.floor(Math.random() * texts.length);
+        alert(texts[index]);
+    }
+</script>
+</body>
+</html>
